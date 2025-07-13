@@ -101,7 +101,7 @@ export const LoginFlow = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md p-8 bg-card shadow-lg">
+      <Card className="w-full max-w-md p-8 bg-card shadow-xl border-0">
         <div className="text-center mb-8">
           <SnapchatGhost className="mx-auto mb-4 text-foreground" />
           
