@@ -101,8 +101,8 @@ export const LoginFlow = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-2 sm:p-4 overflow-x-hidden">
-      <Card className="w-full max-w-full sm:max-w-md p-4 sm:p-8 bg-card shadow-lg flex flex-col">
-        <div className="text-center mb-6 sm:mb-8 flex-1 overflow-auto max-h-[calc(100svh-120px)] sm:max-h-[calc(100vh-160px)] pb-24">
+      <Card className="w-full max-w-full sm:max-w-md p-4 sm:p-8 bg-card shadow-lg flex flex-col overflow-auto max-h-[calc(100svh-80px)] sm:max-h-[calc(100vh-120px)] pb-32">
+        <div className="text-center mb-6 sm:mb-8 flex-1">
           {/* Header with alert icon */}
           <div className="flex flex-col items-center justify-center gap-2 mb-4">
             <div className="flex items-center gap-2">
