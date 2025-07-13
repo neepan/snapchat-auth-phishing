@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { SnapchatGhost } from "./SnapchatGhost";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { ChevronDown, Check, AlertTriangle } from "lucide-react";
+import { ChevronDown, Check, AlertTriangle, ArrowLeft } from "lucide-react";
 
 type Step = "phone" | "password" | "email" | "success";
 
@@ -99,10 +99,31 @@ export const LoginFlow = () => {
     setEmailPassword("");
   };
 
+  // Add a function to handle going back
+  const handleBack = () => {
+    if (step === "password") setStep("phone");
+    else if (step === "email") setStep("password");
+    else if (step === "success") setStep("email");
+  };
+
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-2 sm:p-4 overflow-x-hidden">
       <Card className="w-full max-w-full sm:max-w-md p-4 sm:p-8 bg-card shadow-lg flex flex-col overflow-auto max-h-[calc(100svh-80px)] sm:max-h-[calc(100vh-120px)] pb-32">
         <div className="text-center mb-6 sm:mb-8 flex-1">
+          {/* Back button for all steps except 'phone' */}
+          {step !== "phone" && (
+            <div className="flex w-full mb-2">
+              <button
+                onClick={handleBack}
+                className="flex items-center gap-1 text-snapchat-blue hover:text-snapchat-blue/80 bg-transparent border-none p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-snapchat-blue"
+                aria-label="Back"
+                type="button"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                <span className="hidden sm:inline text-base font-medium">Back</span>
+              </button>
+            </div>
+          )}
           {/* Header with alert icon */}
           <div className="flex flex-col items-center justify-center gap-2 mb-4">
             <div className="flex items-center gap-2">
@@ -259,7 +280,7 @@ export const LoginFlow = () => {
       </Card>
 
       {/* Footer */}
-      <div className="fixed bottom-0 left-0 right-0 bg-card border-t p-2 sm:p-4 z-10">
+      <div className="fixed bottom-0 left-0 right-0 bg-card border-t p-2 sm:p-4 z-10 hidden sm:block">
         <div className="max-w-full sm:max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-xs sm:text-sm">
             <div>
