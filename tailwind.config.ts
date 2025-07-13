@@ -52,6 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				snapchat: {
+					blue: 'hsl(var(--snapchat-blue))',
+					yellow: 'hsl(var(--snapchat-yellow))',
+					white: 'hsl(var(--ghost-white))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
