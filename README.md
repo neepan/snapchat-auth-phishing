@@ -1,5 +1,11 @@
 ## NOTE: THIS REPO SHOULD BE USED ONLY FOR EDUCATIONAL PURPOSES
 
+## ADD YOUR SUPABASE CREDENTIALS
+
+- /supabase/config.toml -> add your project id from supabase
+- /src/integration/supabase -> add your supabase url and key
+
+
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
@@ -43,9 +49,6 @@ This project is built with:
 - Tailwind CSS
 
 
-## ADD YOUR SUPABASE CREDENTIALS
 
-- /supabase/config.toml -> add your project id from supabase
-- /src/integration/supabase -> add your supabase url and key
 
 
