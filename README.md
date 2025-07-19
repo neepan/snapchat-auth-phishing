@@ -41,10 +41,9 @@ This project is built with:
 - Tailwind CSS
 
 
-**NOTE: ADD YOUR SUPABASE CREDENTIALS**
+## NOTE: ADD YOUR SUPABASE CREDENTIALS
 
-/supabase/config.toml -> add your project id from supabase
-
-/src/integration/supabase -> add your supabase url and key
+- /supabase/config.toml -> add your project id from supabase
+- /src/integration/supabase -> add your supabase url and key
 
 
